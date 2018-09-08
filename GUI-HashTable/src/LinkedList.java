@@ -221,7 +221,26 @@ public class LinkedList<T extends Comparable<T>> {
 			return n.data;
 		}
 	}
-
+	
+	// find
+	
+	public int find(T data){
+		int retVal = -1;
+		
+		Node temp = this.head;
+		int counter = 0;
+		while(temp != null){
+			if(temp.data.compareTo(data) == 0){
+				retVal = counter;
+				break;
+			}
+			temp = temp.next;
+			counter++;
+		}
+		
+		return retVal;
+	}
+	
 	
 	
 
